@@ -3,9 +3,10 @@ var router = express.Router();
 
 
 router.get('/year', function(req, res) {
-  const currentDate = new Date();
-console.log(currentDate)
-  res.json( { year: currentDate});
+  const date = new Date();
+  const année = date.getFullYear();
+
+  res.json( { year: année});
 });
 
 module.exports = router;
